@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="rus">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../Kraynowa kino/css/style.css">
+    <script src="script.js"></script>
+    <script src="https://use.fontawesome.com/26a18fd4a9.js"></script>
+    <script type="text/javascript" src="path/to/jquery.js"></script>
+<script type="text/javascript" src="path/to/jquery.jcarousellite.js"></script>
+<script type="text/javascript" src="path/to/easing.js"></script>
+<script type="text/javascript" src="path/to/mousewheel.js"></script>
+
+    <title>MegaKino</title>
+</head>
+<body onload="boot()">
+    <div class="header">
+        <div class=""><img src="../Kraynowa kino/img/logo.png"></div>
+            <div class=""><h1>Адрес: г. Нижний Новгород, ул. Голубева, 3<br>
+                Телефон: 8-800-097-77-77</h1></div>
+    </div>
+    <div class="menu">
+        <div class="dlina">
+<div><a href="#">Кинотеатры</a></div>
+<div><a href="#">Акции</a></div>
+<div><a href="#">Купить билет</a></div>
+<div><a href="#">Фильмы</a></div>
+    </div>
+
+    </div>
+   
+<div class="slide-show">
+    <div class="slides fade">
+        <div class="text">Довод</div>
+        <iframe class="video"  src="https://www.youtube.com/embed/C6dZA-buNCw"></iframe>
+
+    </div>
+    <div class="slides fade">
+        <div class="text">Ведьмы</div>
+       <iframe class="video"  src="https://www.youtube.com/embed/rOZfcoUhCG0" ></iframe>
+       
+
+    </div>
+    <div class="slides fade">
+        <div class="text">СЕМЕЙКА КРУДС: НОВОСЕЛЬЕ</div>
+       <iframe class="video"  src="https://www.youtube.com/embed/n5PQNOV9EyU"></iframe>
+
+    </div>
+    <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+    <a class="next" onclick="changeSlide(1)">&#10095; </a>
+    </div>
+
+    <div style="text-align: center;" >
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+    <div class="info"><p>Кинотетр — общественное здание <br>или его
+         часть с оборудованием<br> для публичной демонстрации кинофильмов.<br> 
+         Главное помещение кинотеатра — зрительный зал <br>с экраном большого размера и системой. </p>
+        
+    </div>
+    <h3>Сейчас в прокате</h3>
+    
+    <div class="row">
+        <div class="column">
+            <img src="img\m_262406.jpg" style="width:100%" onclick="openModal();curSlide(1)" class="hover-shadow cursor">
+        </div>
+        <div class="column">
+            <img src="img/kinopoisk.ru-The-Witches-3560525--o--.jpg" style="width:100%" onclick="openModal();curSlide(1)" class="hover-shadow cursor">
+        </div>
+        <div class="column">
+            <img src="img/kinopoisk.ru-Druk-3561290.jpg" style="width:100%" onclick="openModal();curSlide(2)" class="hover-shadow cursor">
+        </div>
+        <div class="column">
+            <img src="img/shou-monstrov.jpg" style="width:100%" onclick="openModal();curSlide(3)" class="hover-shadow cursor">
+        </div>
+    </div>
+    
+    <div id="myModal" class="modal">
+        <span class="close cursor" onclick="closeModal()">×</span>
+        <div class="modal-content">
+
+            <div class="mySlides">
+                <img src="img\m_262406.jpg" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <img src="img/kinopoisk.ru-The-Witches-3560525--o--.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <img src="img/kinopoisk.ru-Druk-3561290.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <img src="img/shou-monstrov.jpg" style="width:100%">
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+
+            <div class="caption-container">
+                <p id="caption"></p>
+            </div>
+
+
+            <div class="column">
+                <img class="demo cursor" src="img\m_262406.jpg" style="width:100%" onclick="currentSlide(1)" alt="
+                Павел Шелест был правильный мужик. Не любил крутых поворотов. Всегда старался поступать как положено. 
+                Но ему не повезло. 15 августа 1990 года на раскаленной трассе Слока-Талси в его автобус врезался «Москвич»
+                 Виктора Цоя. Кумир миллионов погиб на месте. Павел ничего не знал о Цое, не слушал его песен. Не знал он и того, что после этого 
+                рокового столкновения его жизнь больше никогда не будет прежней.">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="img/kinopoisk.ru-The-Witches-3560525--o--.jpg" style="width:100%" onclick="currentSlide(1)" alt="
+                Ведьмы существуют, и они среди нас! Знаменитую книгу Даля заново откроют для современных зрителей. 
+                Визуально инновационные «Ведьмы» Земекиса расскажут полную мрачного
+                 юмора и в то же время трогательную историю юного сироты.">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="img/kinopoisk.ru-Druk-3561290.jpg" style="width:100%" onclick="currentSlide(2)" alt="
+                Заходят как-то в бар профессор истории, психолог, экономист и физрук… И решают проверить научную теорию: 
+                c самого рождения человек страдает от нехватки алкоголя в крови. 
+                Чтобы стать по-настоящему счастливым, нужно быть немного нетрезвым. Бокал вина утром, пинта пива в обед, 
+                стакан виски вечером. Казалось бы, что может пойти не так?">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="img/shou-monstrov.jpg" style="width:100%" onclick="currentSlide(3)" alt="
+                Школьнику Дэнни живется несладко: он не может подружиться с одноклассниками и не находит общего языка с 
+                преподавателями. И всему виной – его гениальность. Но однажды он попадает в школу для одаренных детей, 
+                где случайно открывает портал в мир.... монстров.">
+            </div>
+        </div>
+    </div>
+
+    <h4>Рейтинг фильмов</h4>
+    <div class="otzyv">
+        
+        <div>
+            <h2>Еще по одной <button id="ret"><p>7,9</p></button></h2>
+            <p>2020, драма, комедия </p>
+            
+        </div>
+        <div>
+            <h2>Довод <button id="ret"><p>7,9</p></button></h2>
+            <p>2020, фантастика, боевик </p>
+            
+        </div>
+        <div>
+            <h2>Подольские курсанты <button id="ret"><p>7,6</p></button></h2>
+            <p>2020, драма, военный  </p>
+           
+        </div>
+        <div>
+            <h2>Ведьмы <button id="ret"><p>5,5</p></button></h2>
+            <p>2020, фэнтези, комедия </p>
+            
+        </div>
+
+    </div>
+
+
+
+</div>
+
+
+    <div class="forma">
+            <h4>Остваьте свой отзыв</h4>
+            <form>
+              
+            <div class="vvod">
+                <div class="item"><input id="name" type="text" placeholder="*E-MAIL"></div>
+                <div  class="item"><input id="name" type="text" placeholder=" *ИМЯ"></div>
+                <div  class="item"><input id="coment" type="text" placeholder="ОТЗЫВ"></div>
+                <button id="but">ОТПРАВИТЬ</button>
+            </div>
+
+        </form>
+
+    </div>
+    <div class="footer">
+        <div class="">
+              <ul>
+                <li><a href="">Контакты</a></li>
+                <li><a href="">Пользовательское соглашение</a></li>
+                <li><a href="">События</a></li>
+                <li><a href="">Вакансии</a></li>
+                <li><a href="">О нас</a></li>
+
+              </ul> 
+            </div>
+            <div>
+                <h5>Мы в соцсетях</h5>
+                <a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,367 @@
+*{
+   
+  
+}
+html,body{
+    width: 1500px;
+    margin: 0 auto;
+}
+.header{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 50%;
+    position: relative;
+    background-image: url(../img/header-504096800.jpg);
+    background-repeat: no-repeat;
+}
+
+.slide-show{
+    border: 8px dashed rgb(0, 0, 0);
+    max-width: 70%;
+    position:  relative;
+    margin:  auto;
+   padding: 10px;
+   margin-bottom: 25px;
+    
+}
+
+.slides{
+    display: none;
+}
+
+.prev, .next{
+    z-index: 20;
+    transition: 0.6s ease;
+    position: absolute;
+    top: calc(50% + 30px);
+    width: auto;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    margin-top: -22px;
+    padding: 16px;
+    font-size: 50px;
+}
+
+.next{
+    right: 0;
+}
+.prev:hover, .next:hover{
+    background-color: rgba(153, 153, 153, 0.5);
+}
+.text{
+    text-transform: uppercase;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    color: rgb(0, 0, 0);
+    font-size: 30pt;
+    padding: 1%;
+    
+    
+}
+.dot{
+    position: relative;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #b1b1b1;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+.active, dot:hover{
+    background-color: #b91119;
+}
+.fade{
+    
+    animation-name: fade;/*тип анимации*/
+    animation-duration: 1.5s;/*длительность*/
+}
+.video{
+    z-index: 1;
+    width: 100%;
+   height: 600px;
+}
+
+
+h1{
+margin-top: 15%;
+text-align: center;
+font-family: Arial, sans-serif;
+color: white;
+font-weight: normal;
+font-size: 28pt;
+}
+
+.menu{
+    position: relative;
+    margin-bottom: 10%;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    background-color: #292929;
+}
+.menu a{
+color: white;
+font-size: 32pt;
+text-decoration: none;
+font-family: Arial,sans-serif;
+}
+.menu a:hover{
+color: #b91119;
+}
+
+.info{
+text-align: center;
+align-items: center;
+margin-top: 10%;
+position: static;
+font-size: 40pt;
+font-family: Arial,  sans-serif;
+font-style: italic;
+background-color: #2e4090;
+/*background-image: url(../img/E8jj.gif);*/
+padding: 30px;
+color: white;
+
+}
+
+.clip{
+    background-image: url(../img/hlop.png);
+    height: 350px;
+    width: 360px;
+}
+
+.dlina{
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+}
+h3{
+    padding-bottom: 30px;
+    border-bottom: 8px dashed black;
+    padding-top: 10%;
+   font-size: 42pt;
+   color: #b91119;
+   font-family: Arial, sans-serif;
+   font-style: italic;
+   text-align: center;
+   margin-bottom: 10%;
+}
+.forma{
+    border-top: 8px dashed black;
+    position: relative;
+    margin-top: 10%;
+    padding-top: 30px;
+    padding-bottom: 180px;
+}
+form{
+    
+    height: 673px;
+    padding-top: 30px;
+    background-image: url(../img/hdhd.jpg);
+    background-size: 100%;
+    
+   
+}
+h4{
+margin-top: 5%;
+color:  #2e4090;
+font-size: 36pt;
+font-family: Arial, sans-serif;
+font-style: italic;
+text-align: center;
+padding-bottom: 10px;
+
+}
+#name{
+    font-family: Arial, sans-serif;
+    font-size: 24pt;
+    border-radius: 20px;
+    width: 705px;
+    height: 85px;
+    border: 3px solid #726969;
+}
+#coment{
+    margin-top: 30px;
+    float: left;
+    font-family: Arial, sans-serif;
+    font-size: 24pt;
+    width: 720px;
+    height: 335px;
+    border-radius: 20px;
+    border: 3px solid #726969;
+}
+.vvod{
+    padding-top: 50px;
+    margin: 0 -5px;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 10%;
+}
+.item{
+    flex: 1 1 auto;
+  margin: 0 5px;
+}
+
+#but{
+color: white;
+width: 265px;
+height: 106px;
+border-radius: 20px;
+border: none;
+background-color: #2e4090;
+font-size: 24pt;
+font-weight: bold;
+font-family: Arial, sans-serif;
+position: absolute;
+margin-top: 15%;
+margin-left:50%;
+}
+#but:hover{
+    color: white;
+    background-color: #b91119;
+}
+.footer{
+line-height: 3em;
+text-align: center;
+display: flex;
+justify-content: space-around;
+position: relative;
+background-color: #18181a;
+}
+.footer a{
+text-decoration: none;
+color: white;
+font-size: 22pt;
+font-family: Arial, sans-serif;
+font-weight: bold;
+}
+.footer li{
+    text-align: left;
+    list-style-type: none;
+}
+.footer h5{
+padding-top: 10%;
+text-align: center;
+font-style: italic;
+color: white;
+font-size: 27pt;
+font-family: Arial, sans-serif;
+font-weight: bold;
+}
+.footer i{
+color: rgb(104, 102, 102);
+font-size: 80px;
+}
+.footer ul{
+padding-top: 10%;
+padding-bottom: 10%;
+}
+
+.row>.column {
+    padding: 0 8px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.column {
+    float: left;
+    width: 23%;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: black;
+}
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    width: 30%;
+    max-width: 1200px;
+}
+
+.close {
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.mySlides {
+    display: none;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+.caption-container {
+    text-align: center;
+    background-color: black;
+    padding: 2px 16px;
+    color: white;
+}
+
+.otzyv{
+    position: relative;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: #2e4090;
+    font-family: Arial, sans-serif;
+   text-align: center;
+}
+
+.otzyv h2{
+    font-weight: bold;
+    color: white;
+    line-height: 2em;
+    font-size: 30pt;
+}
+.otzyv p{
+    color: rgb(22, 22, 22);
+    font-size: 20pt;
+}
+#ret{
+    border: none;
+    border-radius: 30%;
+    font-size: 10pt;
+    
+}
+
+#ret p{
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    color: #b91119;
+    background-color: none;
+}
+
+
+
+
+  
+  
